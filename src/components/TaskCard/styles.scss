@@ -1,0 +1,36 @@
+.task-card-container {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  width: 100%;
+  padding: 1.6rem;
+  box-shadow: 0 1px 3px #00000010;
+
+  .info-container {
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    
+    .description {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+
+  .btns-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+
+    .icon {
+      font-size: 2.6rem;
+      cursor: pointer;
+      transition: color .2s ease-in;
+
+      &:hover {
+        color: #6C757D;
+      }
+    }
+  }
+}
