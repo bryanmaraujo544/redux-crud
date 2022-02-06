@@ -5,14 +5,14 @@
 
   form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1.2rem;
     width: 100%;
 
     input {
       padding: 0 1.6rem;
       height: 5rem;
-      width: 100%;
+      flex: 1;
       font-size: 1.6rem;
       font-weight: 700;
     }
@@ -24,7 +24,6 @@
       font-size: 1.6rem;
       font-weight: 700;
       height: 5rem;
-
       width: 100%;
     }
   }

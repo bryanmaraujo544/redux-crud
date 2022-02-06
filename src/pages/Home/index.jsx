@@ -15,11 +15,12 @@ export const Home = () => {
     <div className="home-container">
       <Header />
       <div className="tasks-container">
-        {users.map(({ title, description }) => (
+        {users.map(({ title, description, id }) => (
           <TaskCard
             key={`${title}${description}`}
             title={title}
             description={description}
+            id={id}
             setIsModalOpen={setIsModalOpen}
           />
         ))}

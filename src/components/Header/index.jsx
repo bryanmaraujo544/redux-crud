@@ -24,7 +24,7 @@ export const Header = () => {
       return window.alert('Already exists one task with this title');
     }
     
-    usersDispatch(addUser(taskInfos));
+    usersDispatch(addUser({...taskInfos, id: `${taskInfos.title + taskInfos.description}`}));
   }
 
   console.log({ users });
