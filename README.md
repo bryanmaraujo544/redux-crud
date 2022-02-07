@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-![Animation](https://user-images.githubusercontent.com/62571814/152456153-e7baff20-2414-4f97-b94e-4f0893abda57.gif)
+<!-- ![Animation](https://user-images.githubusercontent.com/62571814/152456153-e7baff20-2414-4f97-b94e-4f0893abda57.gif) -->
 
 > A simple to-do list made using React and managing the states with Redux.
 
