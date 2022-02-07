@@ -2,19 +2,19 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { addUser } from '../../features/users/usersSlice';
+import { addTask } from '../../features/tasks/tasksSlice';
 import './styles.scss';
 
 export const Header = () => {
   const [taskInfos, setTaskInfos] = useState({ title: '', description: '' });
 
-  const users = useSelector(state => state.users.value);
-  const usersDispatch = useDispatch();
+  const tasks = useSelector(state => state.tasks.value);
+  const tasksDispatch = useDispatch();
   
   function handleSubmit(e) {
     e.preventDefault();
     const hasFieldEmpty = (taskInfos.title === '' || taskInfos.description === '');
-    const hasTaskWithSameTitle = (users.some((user) => user.title === taskInfos.title));
+    const hasTaskWithSameTitle = (tasks.some((task) => task.title === taskInfos.title));
 
     if (hasFieldEmpty) {
       return window.alert('Some field is empty!!!!');
@@ -24,10 +24,10 @@ export const Header = () => {
       return window.alert('Already exists one task with this title');
     }
     
-    usersDispatch(addUser({...taskInfos, id: `${taskInfos.title + taskInfos.description}`}));
+    tasksDispatch(addTask({...taskInfos, id: `${taskInfos.title + taskInfos.description}`}));
   }
 
-  console.log({ users });
+  console.log({ tasks });
   return (
     <header className="header-container">
       <form onSubmit={handleSubmit}>
